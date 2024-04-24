@@ -1,0 +1,56 @@
+@use "../../app/styles/color";
+@import "../../app/styles/color";
+
+@mixin Link {
+    text-decoration: none;
+    font-family: Space Grotesk;
+
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    color: $themelight;
+    text-wrap: nowrap;
+    padding: 2rem 1rem;
+    letter-spacing: -0.01rem;
+}
+
+.NavBar {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    .NavBarContainer {
+        display: flex;
+        width: 100%;
+        max-width: 180rem;
+        justify-content: space-between;
+        padding: 0rem 1rem;
+        .NameLink {
+            @include Link();
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            .SMLogo {
+                height: 2rem;
+                width: 2rem;
+            }
+        }
+
+        .NavLinks {
+            display: flex;
+            align-items: center;
+            .Link {
+                @include Link();
+                display: flex;
+                align-items: center;
+                gap: 0.6rem;
+                opacity: 0.7;
+                transition: 0.2s ease-in-out;
+                &:hover {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}

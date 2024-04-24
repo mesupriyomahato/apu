@@ -1,0 +1,82 @@
+@use './color';
+@use './typography';
+
+@import './color';
+@import './typography';
+
+.Wraper {
+    display: flex;
+    padding-top: 0rem;
+    width: 100%;
+    align-items: center;
+    flex-direction: column;
+
+    .Container {
+        width: 100%;
+        font-family: Space Grotesk;
+        font-size: 1.3rem;
+        font-weight: 400;
+        letter-spacing: -0.04rem;
+        color: #7b7b7b;
+        max-width: 180rem;
+        overflow: hidden;
+    }
+}
+
+@mixin smooth {
+    transition: 0.2s ease-in-out;
+}
+
+.Universal {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.Btn {
+    @include font($burnersemibold, $s, $none);
+    display: inline-flex;
+    height: 6.2rem;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    background-color: hsla(152, 47%, 41%);
+    color: #212121;
+    color: #fafafa;
+    border-radius: 0.6rem;
+    border: transparent;
+    padding: 1.8rem 2rem;
+    text-decoration: none;
+    flex-wrap: nowrap;
+    text-wrap: nowrap;
+    width: 100%;
+    @include smooth();
+
+    &:hover {
+        background-color: hsla(152, 80%, 41%);
+    }
+}
+
+.DeleteButton {
+    background-color: hsl(0, 57%, 53%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: content-box;
+    padding: 0.6rem;
+    border-radius: 0.6rem;
+    @include smooth();
+    cursor: pointer;
+
+    &:hover {
+        background-color: hsl(0, 90%, 53%);
+    }
+
+    .DeleteIcon {
+        height: 2.6rem;
+        width: 2.6rem;
+    }
+}

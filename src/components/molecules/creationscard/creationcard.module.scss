@@ -1,0 +1,77 @@
+@use "../../../app/styles/color";
+@use "../../../app/styles/typography";
+@use "../../../app/styles/essentials";
+@import "../../../app/styles/typography";
+@import "../../../app/styles/color";
+@import "../../../app/styles/essentials";
+
+.CreationsWraper {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    flex-direction: column;
+    gap: 2rem;
+
+    .CreationPreviewContainer {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        background-color: #333;
+        padding: 1rem;
+        border-radius: 0.6rem;
+
+        .Preview {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 1rem;
+            width: 100%;
+
+
+            .BannerPreview {
+                user-select: none;
+                pointer-events: none;
+                height: 6rem;
+                width: 6rem;
+                aspect-ratio: 1/1;
+                object-fit: cover;
+                border-radius: 0.6rem;
+            }
+
+            .PreviewDetails {
+                display: flex;
+                flex-direction: column;
+                gap: 0.4rem;
+                background-color: #333;
+                height: 6rem;
+                align-items: center;
+                width: 100%;
+                overflow: hidden;
+                justify-content: center;
+                position: relative;
+
+                .Overflow {
+                    position: absolute;
+                    width: 100%;
+                    bottom: 0;
+                    height: 3rem;
+                    background: linear-gradient(0deg, #333 0%, rgba(51, 51, 51, 0.00) 100%);
+                }
+
+                .Caption {
+                    @include font($burnersemibold, $s, $none);
+                    color: #fafafa;
+                    display: inline-block;
+                    width: 100%;
+                    max-width: 100%;
+                    white-space: wrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+            }
+        }
+
+    }
+}

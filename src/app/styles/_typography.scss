@@ -1,0 +1,126 @@
+$xxs: 1.3rem;
+$xs: 1.4rem;
+$s: 1.6rem;
+$r: 1.7rem;
+$l: 2rem;
+$xl: 2.4rem;
+$xxl: 3rem;
+$display: 7rem;
+
+
+$triml: -0.1rem;
+$trimr: -0.02rem;
+$none: 0rem;
+$trims: -0.01rem;
+
+$burnerregular: 'HK Grotesk Regular';
+$burnermedium: 'HK Grotesk Medium';
+$burnersemibold: 'HK Grotesk SemiBold';
+$burnerbold: 'HK Grotesk Bold';
+
+
+$secondaryregular: 'Nyght Regular';
+$secondarymedium: 'Nyght Medium';
+$secondarybold: 'Nyght Bold';
+
+@mixin font($font-family, $font-size, $trim) {
+  font-family: $font-family;
+  font-size: $font-size;
+  letter-spacing: $trim;
+}
+
+.HeadingL {
+  @include font($burnerbold, $xxl, $triml);
+}
+
+.TextR {
+  @include font($burnerbold, $s, $trims);
+}
+
+.DescriptionXS {
+  @include font($burnerregular, $xs, $trims);
+  line-height: 150%;
+}
+
+.superheading {
+  @include font($burnerbold, $xl, $trims);
+}
+
+
+@mixin SubHeading {
+    letter-spacing: 0rem;
+    font-weight: 500;
+    font-size: 2rem;
+    // font-size: 5rem;
+    line-height: 130%;
+    // text-transform: lowercase;
+    font-family: HK Grotesk Bold;
+    letter-spacing: -0.02rem;
+    font-weight: 700;
+    color: #1d1d1f;
+}
+
+.SubHeading {
+    @include SubHeading();
+}
+
+@mixin HeadingMd {
+    letter-spacing: 0rem;
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 130%;
+    font-family: HK Grotesk SemiBold;
+    // letter-spacing: -0.04rem;
+    font-weight: 600;
+    color: #1d1d1f;
+}
+
+.HeadingMd {
+    @include HeadingMd();
+}
+
+@mixin DescriptionMd {
+    letter-spacing: 0rem;
+    font-size: 1.4rem;
+    line-height: 100%;
+    font-family: HK Grotesk Regular;
+    letter-spacing: -0.02rem;
+    font-weight: 400;
+    color: #86868b;
+}
+
+.DescriptionMd {
+    @include DescriptionMd();
+}
+
+@mixin Description {
+    letter-spacing: 0rem;
+    font-size: 1.6rem;
+    line-height: 130%;
+    font-family: HK Grotesk Regular;
+    letter-spacing: -0.02rem;
+    font-weight: 400;
+    color: #86868b;
+}
+
+.Description {
+    @include Description();
+}
+
+@mixin DescriptionX {
+    letter-spacing: 0rem;
+    font-size: 1.7rem;
+    line-height: 130%;
+    font-family: HK Grotesk SemiBold;
+    letter-spacing: -0.02rem;
+    font-weight: 400;
+    color: #6d6d6d;
+}
+
+.Description {
+    @include DescriptionX();
+}
+
+
+// Argumental Typo
+

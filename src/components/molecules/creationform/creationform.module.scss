@@ -1,0 +1,12 @@
+@use '../../../app/styles/essentials';
+@use '../../../app/styles/typography';
+@import '../../../app/styles/essentials';
+
+@import '../../../app/styles/typography';
+
+
+.CreationForm{
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}

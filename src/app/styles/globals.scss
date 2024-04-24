@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Outfit:wght@100..900&family=Space+Grotesk:wght@300..700&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #fff;
+  background-color: #121212;
+  color: #fff;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+::selection {
+  color: #fff;
+  background: #222;
+}
+
+
+
+// Edu Burner Modern Font Starts
+
+@font-face {
+  font-family: HK Grotesk Regular;
+  src: url(/UIEssentials/fonts/HKGrotesk-Regular.woff) format("woff");
+}
+
+@font-face {
+  font-family: HK Grotesk Medium;
+  src: url(/UIEssentials/fonts/HKGrotesk-Medium.woff) format("woff");
+}
+
+@font-face {
+  font-family: HK Grotesk SemiBold;
+  src: url(/UIEssentials/fonts/HKGrotesk-SemiBold.woff) format("woff");
+}
+
+@font-face {
+  font-family: HK Grotesk Bold;
+  src: url(/UIEssentials/fonts/HKGrotesk-Bold.woff) format("woff");
+}
+
+// Edu Burner Modern Font Ends

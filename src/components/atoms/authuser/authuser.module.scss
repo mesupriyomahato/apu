@@ -1,0 +1,35 @@
+@use '../../../app/styles/essentials';
+@import '../../../app/styles/essentials';
+
+.Avatar {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    height: 8rem;
+    width: 8rem;
+    border-radius: 100rem;
+    cursor: pointer;
+
+    &:hover .LogoutButton{
+        display: flex;
+    }
+    .AvatarPic {
+        user-select: none;
+        pointer-events: none;
+        z-index: 90;
+    }
+    .LogoutButton {
+        position: absolute;
+        top: 0;
+        z-index: 100;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 8rem;
+        width: 8rem;
+        background-color: #fff;
+        display: none;
+        overflow: hidden;
+        @include smooth();
+    }
+}

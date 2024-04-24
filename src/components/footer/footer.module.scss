@@ -1,0 +1,132 @@
+@use "../../app/styles/color";
+@import "../../app/styles/color";
+
+@mixin Smooth {
+    transition: all 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+.Footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #1a1a1b;
+    .FooterContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        max-width: 180rem;
+        gap: 4rem;
+
+        padding: 5rem 5rem;
+
+
+        @media only screen and (max-width: 800px) {
+            padding: 5rem 1.6rem;
+        }
+
+        .HomeLink {
+            cursor: pointer;
+        }
+
+        .FooterLabel {
+            font-family: Burner Font;
+            font-family: Space Grotesk;
+
+            font-size: 3rem;
+            letter-spacing: -0.1rem;
+            color: $carbonblack;
+            font-weight: 500;
+            line-height: 120%;
+            text-transform: lowercase;
+            color: #fff;
+            span {
+                color: #04a777;
+            }
+        }
+
+        .BottomContainer {
+            display: flex;
+            width: 100%;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            gap: 4rem;
+            padding: 3rem 0rem;
+
+            border-bottom: 0.2rem solid #303030;
+
+            @media only screen and (max-width: 860px){
+                flex-direction: column-reverse;
+            }
+
+            .Company {
+                display: flex;
+                align-items: flex-start;
+                gap: 4rem;
+                flex-direction: column;
+                .FooterLinks {
+                    display: flex;
+                    align-items: flex-start;
+                    gap: 0.6rem;
+                    .SocialIcon {
+                        display: flex;
+                        padding: 3rem;
+                        align-items: center;
+                        justify-content: center;
+                        background-color: #242425;
+                        border-radius: 6rem;
+                        transition: 0.2s ease-in-out;
+                        &:hover {
+                            border-radius: 3rem;
+                            background-color: #282828;
+                        }
+                    }
+                }
+            }
+
+            .Socials {
+                display: flex;
+                align-items: center;
+                flex-direction: row;
+                gap: 1rem;
+            }
+        }
+
+        .Copyright {
+            padding: 0.2rem 0rem;
+            display: flex;
+            flex-direction: row;
+            gap: 4rem;
+            align-items: flex-start;
+
+            @media only screen and (max-width: 800px) {
+                flex-direction: column;
+            }
+            .CopyText {
+                color: #acacac;
+                font-family: Burner Font Bold;
+                font-family: Space Grotesk;
+
+                text-wrap: nowrap;
+                font-size: 1.2rem;
+                font-style: normal;
+                text-transform: uppercase;
+                font-weight: 600;
+                line-height: 100%; /* 1.7rem */
+            }
+
+            .CopyrightLabel {
+                color: #acacac;
+                font-family: Burner Font;
+                font-family: Space Grotesk;
+
+                font-size: 1.2rem;
+                font-style: normal;
+                font-weight: 500;
+                letter-spacing: -0.03rem;
+                line-height: 120%; /* 1.7rem */
+            }
+        }
+    }
+}

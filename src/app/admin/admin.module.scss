@@ -1,0 +1,55 @@
+@use '../styles/color';
+@use '../styles/essentials';
+@use '../styles/typography';
+
+@import '../styles/color';
+@import '../styles/essentials';
+@import '../styles/typography';
+
+.Container {
+    padding: 2rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    background-color: #171717;
+}
+
+.AdmminContainer{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 4rem;
+
+    @media only screen and (max-width: 60rem) {
+        flex-direction: column;
+    }
+    .AddCreationContainerForm {
+        background-color: #272727;
+        padding: 2rem;
+        width: 100%;
+        border-radius: 0.6rem;
+    
+        .ContainerHeading {
+            padding: 3rem 0rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+    
+        .Heading {
+            @include font($burnerbold, $l, $trimr);
+            color: #fafafa;
+        }
+    
+        .Description {
+            @include font($burnersemibold, $s, $none);
+        }
+    }
+    .CreationsContainer{
+        display: flex;
+        width: 100%;
+    }
+}
+

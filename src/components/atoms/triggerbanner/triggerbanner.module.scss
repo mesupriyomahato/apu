@@ -1,0 +1,16 @@
+.sliderContainer {
+    .Slider {
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+        align-items: center;
+        user-select: none;
+
+        .TechBanner {
+            height: 2.8rem;
+            opacity: 0.2;
+            user-select: none;
+            pointer-events: none;
+        }
+    }
+}

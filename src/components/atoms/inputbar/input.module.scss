@@ -1,0 +1,136 @@
+@use '../../../app/styles/essentials';
+@use '../../../app/styles/typography';
+
+@import '../../../app/styles/essentials';
+@import '../../../app/styles/typography';
+
+
+.Label {
+    @include font($burnersemibold, $xs, $none);
+    color: #727272;
+    letter-spacing: 0rem;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.InputBar {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+}
+
+.Input {
+    outline: none;
+    border: none;
+    padding: 1.8rem 1.7rem;
+    @include font($burnersemibold, $s, $none);
+    background-color: #313131;
+    color: #ccc;
+    border: 0.2rem solid #313131;
+    transition: 0.2s ease-in-out;
+    border-radius: 0.6rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 6.2rem;
+    list-style: 100%;
+
+    ::placeholder {
+        color: #ccc;
+        @include font($burnersemibold, $s, $none);
+    }
+
+    &:hover {
+        border: 0.2rem solid #4d4d4d;
+    }
+
+    &:focus {
+        border: 0.2rem solid #777777;
+        color: #fff;
+    }
+}
+
+.PasswordInput {
+    background-color: #616161;
+    display: flex;
+    align-items: center;
+    position: relative;
+    border-radius: 0.6rem;
+}
+
+.PasswordInputField {
+    // @include smooth();
+    font-family: 'Inter', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+
+.TogglePasswordButton {
+    position: absolute;
+    right: 0;
+    padding: 1rem;
+
+    background: none;
+    border: none;
+    outline: none;
+    display: flex;
+    cursor: pointer;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    @include smooth();
+
+    &:hover {
+        opacity: 0.6;
+    }
+}
+
+.secondaryInput {
+    background-color: #616161;
+    display: flex;
+    align-items: center;
+    height: 6.2rem;
+    border-radius: 0.6rem;
+
+    .InputLabel {
+        @include font($burnersemibold, $s, $none);
+        padding-left: 1.7rem;
+        color: #fff;
+    }
+
+    .SecondaryInputBox {
+        outline: none;
+        border: none;
+        @include font($burnersemibold, $s, $none);
+        background-color: #616161;
+        overflow: hidden;
+        color: #ccc;
+        border: 0.2rem solid #616161;
+        border-left: none;
+        transition: 0.2s ease-in-out;
+        border-top-right-radius: 0.6rem;
+        border-bottom-right-radius: 0.6rem;
+
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        list-style: 100%;
+
+        &:hover {
+            border-bottom: 0.2rem solid #E6E6E6;
+        }
+
+        &:focus {
+            border-bottom: 0.2rem solid #E6E6E6;
+            color: #fff;
+        }
+    }
+}

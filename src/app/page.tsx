@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Name from "@/components/atoms/name/name";
-import styles from './Home.module.scss';
+import styles from '@/app/home.module.scss';
 import NavBar from "@/components/navbar/navbar";
 import Footer from "@/components/footer/footer";
 import TriggerBanner from "@/components/atoms/triggerbanner/triggerbanner";

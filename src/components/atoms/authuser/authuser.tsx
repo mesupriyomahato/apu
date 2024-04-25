@@ -22,7 +22,7 @@ export default async function AuthUserBadge() {
         <div className={styles.UserBadge}>
             {!(await isAuthenticated()) ? (
                 <div className={styles.LoginButton}>
-                    <LoginLink style={{height: '100%', width: '100%'}}>
+                    <LoginLink style={{ height: '100%', width: '100%' }}>
                         Sign in
                     </LoginLink>
                 </div>
@@ -43,7 +43,9 @@ export default async function AuthUserBadge() {
                         </div>
                     )}
                     <div className={styles.LogoutButton}>
-                        {/* <LogoutLink style={{height: '100%', width: '100%'}}>Log out</LogoutLink> */}
+                        <LogoutLink style={{ height: '100%', width: '100%' }}>
+                            📴
+                        </LogoutLink>
                     </div>
                 </div>
             )}
